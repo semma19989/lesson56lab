@@ -1,6 +1,8 @@
 package kg.attractor.lesson56lab.model;
 
 
+import kg.attractor.lesson56lab.state.StateContext;
+import kg.attractor.lesson56lab.util.Generator;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;

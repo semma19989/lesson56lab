@@ -1,7 +1,8 @@
 package kg.attractor.lesson56lab.controller;
 
-import com.lesson56lab.task_manager.dto.UserDTO;
-import com.lesson56lab.task_manager.service.UserService;
+
+import kg.attractor.lesson56lab.dto.UserDTO;
+import kg.attractor.lesson56lab.service.UserService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

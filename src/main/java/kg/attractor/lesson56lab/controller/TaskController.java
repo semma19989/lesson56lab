@@ -1,9 +1,10 @@
 package kg.attractor.lesson56lab.controller;
 
-import com.lesson56lab.task_manager.dto.CreateTaskDTO;
-import com.lesson56lab.task_manager.dto.DetailTaskDTO;
-import com.lesson56lab.task_manager.dto.GetTaskDTO;
-import com.lesson56lab.task_manager.service.TaskService;
+
+import kg.attractor.lesson56lab.dto.CreateTaskDTO;
+import kg.attractor.lesson56lab.dto.DetailTaskDTO;
+import kg.attractor.lesson56lab.dto.GetTaskDTO;
+import kg.attractor.lesson56lab.service.TaskService;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
@@ -18,12 +19,13 @@ public class TaskController {
     }
 
     @GetMapping("/name/{name}/all")
-    public Iterable<GetTaskDTO> findAll(@ApiIgnore Pageable pageable,@PathVariable("name")String name){
+
+    public Iterable<GetTaskDTO> findAll(@ApiIgnore Pageable pageable, @PathVariable("name")String name){
         return ts.getAllTask(pageable,name);
     }
 
     @PostMapping("/name/{name}")
-    public DetailTaskDTO createTask(@RequestBody CreateTaskDTO createTaskDTO,@PathVariable("name")String name){
+    public DetailTaskDTO createTask(@RequestBody CreateTaskDTO createTaskDTO, @PathVariable("name")String name){
         return ts.createTask(createTaskDTO,name);
     }
 
